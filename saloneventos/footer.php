@@ -38,37 +38,7 @@
         <div class="datos">
           <div class="info">
             <ul>
-              <li>
-                <a href="pages/salon.html" class="hvr-underline-from-center"
-                  >Salón</a
-                >
-              </li>
-              <li>
-                <a
-                  href="pages/serviciosincluidos.html"
-                  class="hvr-underline-from-center"
-                  >Servicios incluidos</a
-                >
-              </li>
-              <li>
-                <a
-                  href="pages/serviciosadicionales.html"
-                  class="hvr-underline-from-center"
-                  >Servicios adicionales</a
-                >
-              </li>
-              <li>
-                <a href="pages/eventos.html" class="hvr-underline-from-center"
-                  >Eventos</a
-                >
-              </li>
-              <li>
-                <a
-                  href="pages/cotizacion.html"
-                  class="hvr-underline-from-center"
-                  >Cotizaciones</a
-                >
-              </li>
+            <?php wp_nav_menu(array('menu'=>'MenuPrincipal')); ?>
             </ul>
           </div>
           <div class="infoContact">

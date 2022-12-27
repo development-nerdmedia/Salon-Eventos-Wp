@@ -8,48 +8,23 @@ get_header(); ?>
       <section class="home">
         <div class="homeBg">
           <div class="filtro-video"></div>
-          <!-- <video src="https://www.youtube.com/watch?v=bUXPB6T8gpw" autoplay="" muted="" playsinline="" loop="" preload="none" poster="img/video-home.jpg"></video> -->
-          <!-- <iframe
-            width="1920"
-            height="1080"
-            src="https://www.youtube.com/embed/bUXPB6T8gpw?start=0&autoplay=1&mute=1&controls=0&loop=1&playsinline=1"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; playsinline; muted; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe> -->
-
-          <iframe 
-          src="https://player.vimeo.com/video/736490091?h=d13a77b71d&loop=1&background=1&quality=auto&app_id=122963" 
-          width="1920" height="1080" frameborder="0" 
-          allow="autoplay; fullscreen; picture-in-picture" 
-          allowfullscreen="" title="30 SEC HOR .mp4" 
-          data-ready="true"></iframe>
-
-          <!-- <iframe src="https://player.vimeo.com/video/409924928?h=0c3a18336e&autoplay=1&title=0&byline=0&portrait=0" width="2408" height="1080" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> -->
+          <span><?php echo get_field('video_fondo'); ?>
         </div>
         <div class="container">
-          <a href="pages/salon.html" class="btnFloat" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500"><span>Salón <br />M&C</span></a>
+          <a href="http://localhost:8008/saloneventos/salon" class="btnFloat" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500"><span><?php echo get_field('texto_boton'); ?></span></a>
           <div class="progress-bar" data-aos="fade-up" data-aos-offset="0" data-aos-once="true" data-aos-duration="1500">
             <span class="completed"></span>
           </div>
         </div>
       </section>
-
+      
       <section class="bajada">
         <div class="filtro"></div>
         <div class="container">
-          <h2 data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">Lorem ipsum dolor sit amet, adipiscing elit dolor sit amet.</h2>
-          <p data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            nullam enim, aliquam bibendum elementum at. Dui magna nunc
-            scelerisque tincidunt vestibulum ornare eget diam. Eget vulputate
-            tempor velit odio nunc arcu morbi. Tortor, mauris leo commodo sed
-            cum. Tortor elit lorem ultricies cras integer ac arcu nec auctor. Ut
-            semper netus ac ut mauris, varius eu tincidunt.
-          </p>
+          <h2 data-aos="fade-up" data-aos-once="true" data-aos-duration="1500"><?php echo get_field('titulo_principal_nosotros_home'); ?></h2>
+          <p data-aos="fade-up" data-aos-once="true" data-aos-duration="1500"><?php echo get_field('descripcion'); ?></p>
           <img
-            src="<?php bloginfo('template_url'); ?>/img/foto-uno.jpg"
+            src="<?php echo get_field('imagen_1'); ?>"
             alt=""
             class="uno"
             data-aos="fade-up"
@@ -59,7 +34,7 @@ get_header(); ?>
             data-aos-once="true"
           />
           <img
-            src="<?php bloginfo('template_url'); ?>/img/foto-dos.jpg"
+            src="<?php echo get_field('imagen_2'); ?>"
             alt=""
             class="dos"
             data-aos="fade-up"
@@ -69,7 +44,7 @@ get_header(); ?>
             data-aos-once="true"
           />
           <img
-            src="<?php bloginfo('template_url'); ?>/img/foto-tres.jpg"
+            src="<?php echo get_field('imagen_3'); ?>"
             alt=""
             class="tres"
             data-aos="fade-up"
@@ -79,7 +54,7 @@ get_header(); ?>
             data-aos-once="true"
           />
           <img
-            src="<?php bloginfo('template_url'); ?>/img/foto-cuatro.jpg"
+            src="<?php echo get_field('imagen_4'); ?>"
             alt=""
             class="cuatro"
             data-aos="fade-up"
@@ -90,10 +65,11 @@ get_header(); ?>
           />
         </div>
       </section>
+      
 
       <section class="serviciosHome">
         <div class="container">
-          <h2>Nuestros eventos</h2>
+          <h2><?php echo get_field('titulo_principal_eventos_home'); ?></h2>
         </div>
         <div class="content">
           <div class="contentimgWrapper" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">
@@ -155,7 +131,7 @@ get_header(); ?>
               </span>
             </div>
             <a class="buttonFlecha" href="pages/eventos.html" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500"
-              >Ver eventos de<span>bodas</span>
+              ><?php echo get_field('texto_boton_eventos'); ?><span>bodas</span>
               <div class="img">
                 <img src="<?php bloginfo('template_url'); ?>/img/flecha-btn.svg" alt="" />
               </div>
@@ -177,7 +153,7 @@ get_header(); ?>
                   Suspendisse nullam enim, aliquam bibendum elementum at. Lorem
                   ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
-                <a href="pages/serviciosadicionales.html" class="buttonFlecha"
+                <a href="http://localhost:8008/saloneventos/servicios-incluidos" class="buttonFlecha"
                   >Ver más
                   <div class="img">
                     <img src="<?php bloginfo('template_url'); ?>/img/flecha-btn.svg" alt="" />
@@ -196,7 +172,7 @@ get_header(); ?>
                   Suspendisse nullam enim, aliquam bibendum elementum at. Lorem
                   ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
-                <a href="pages/serviciosadicionales.html" class="buttonFlecha"
+                <a href="http://localhost:8008/saloneventos/servicios-adicionales" class="buttonFlecha"
                   >Ver más
                   <div class="img">
                     <img src="<?php bloginfo('template_url'); ?>/img/flecha-btn.svg" alt="" />
@@ -301,7 +277,7 @@ get_header(); ?>
       <section class="call">
         <div class="container">
           <h2 data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">¿Tienes algún evento?</h2>
-          <a href="pages/cotizaciones.html" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500"
+          <a href="http://localhost:8008/saloneventos/cotizaciones" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500"
             >Solicita tu cotización <img src="<?php bloginfo('template_url'); ?>/img/flecha-black.svg" alt=""
           /></a>
         </div>

@@ -129,6 +129,7 @@ header {
         header nav .navigation ul li ul li {
           background-color: #fff;
           display: block;
+          margin: 0;
           padding: 15px 20px; }
           header nav .navigation ul li ul li a {
             color: var(--color-oscuro); }
@@ -688,7 +689,22 @@ footer {
     margin-bottom: 50px; }
     footer .datos .info ul li {
       list-style: none;
-      padding: 15px 0; }
+      margin: 15px 0;
+      width: fit-content;
+      /* padding: 15px 0;  */
+    }
+      footer .datos .info ul li{
+        display: list-item;
+      }
+      footer .datos .info ul li.fex{
+        padding: 0;
+      }
+      footer .datos .info ul li.fex a:first-child{
+        display: none;
+      }
+      footer .datos .info ul li.fex .menu-item a{
+        display: block;
+      }
       footer .datos .info ul li a {
         color: #fff;
         text-decoration: none;
@@ -925,7 +941,9 @@ section.galery {
     cursor: pointer; }
 
 body.servicios section.galery,
-body.servicios section.bajadaSalon {
+body.parent-pageid-35 section.galery,
+body.servicios section.bajadaSalon,
+body.parent-pageid-35 section.bajadaSalon {
   padding: 100px 0; }
 
 body.hide-scrolling {
@@ -1668,6 +1686,7 @@ section.thanks {
   section.call,
   section.serviciosInterna,
   body.servicios section.galery,
+  body.parent-pageid-35 section.galery,
   section.ContentEvent,
   section.contacForm,
   section.bannerContacto {
@@ -1719,7 +1738,8 @@ section.thanks {
     transform: translateX(-50%) translateY(-50%) scale(0.54); }
   section.banner h2 {
     font-size: 50px; }
-  body.servicios section.bajadaSalon {
+  body.servicios section.bajadaSalon,
+  body.parent-pageid-35 section.bajadaSalon{
     padding: 80px 0; }
   section.serviciosInterna .containerDetalles .categoria {
     padding-right: 50px; }
